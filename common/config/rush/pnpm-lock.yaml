@@ -7,15 +7,21 @@ importers:
 
   ../../apps/hello-world:
     specifiers:
+      '@acme/roku-rig': workspace:*
       '@rokucommunity/bslint': ~0.7.5
       brighterscript: ~0.57.2
       roku-deploy: ~3.9.1
       rooibos-roku: ~5.2.2
+    dependencies:
+      '@acme/roku-rig': link:../../rigs/roku-rig
     devDependencies:
       '@rokucommunity/bslint': 0.7.5_brighterscript@0.57.2
       brighterscript: 0.57.2
       roku-deploy: 3.9.1
       rooibos-roku: 5.2.2
+
+  ../../rigs/roku-rig:
+    specifiers: {}
 
 packages:
 
@@ -855,6 +861,7 @@ packages:
     resolution: {integrity: sha512-/QME/DIJZe6vCZbsgwNxv1QNzlBejzNPja++pauoQXt3aFajl+qLnZN3ALY/7BMwIBgOOQhdUKp4i3lgfXL31w==}
     dependencies:
       source-map: 0.7.4
+      undent: 0.1.0
       vscode-languageserver: 6.1.1
       vscode-languageserver-protocol: 3.15.3
     dev: true
@@ -979,6 +986,10 @@ packages:
   /type-fest/0.13.1:
     resolution: {integrity: sha512-34R7HTnG0XIJcBSn5XhDd7nNFPRcXYRZrBB2O2jdKqYODldSzBAqzsWoZYYvduky73toYS/ESqxPvkDf/F0XMg==}
     engines: {node: '>=10'}
+    dev: true
+
+  /undent/0.1.0:
+    resolution: {integrity: sha512-vohX7ywgBjRxDNw+f3wHclSXmO0z9HsEfmGObOuG7G0yi7kZ6OtCG8kAxtDSNklmua5KR6ev2drTFqMGqpYEbg==}
     dev: true
 
   /universalify/0.1.2:

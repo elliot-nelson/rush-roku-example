@@ -1,0 +1,12 @@
+{
+  "name": "@acme/roku-rig",
+  "version": "0.0.0",
+  "private": true,
+  "description": "A rig package for Roku projects",
+  "scripts": {
+    "_phase:build": "",
+    "_phase:test": "",
+    "build": "",
+    "test": ""
+  }
+}

@@ -4,7 +4,7 @@
   "description": "A basic sample channel application for Roku",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "bsc"
   },
   "keywords": ["ropm"],
   "author": "",
@@ -14,5 +14,8 @@
     "@rokucommunity/bslint": "~0.7.5",
     "roku-deploy": "~3.9.1",
     "rooibos-roku": "~5.2.2"
+  },
+  "dependencies": {
+    "@acme/roku-rig": "workspace:*"
   }
 }
