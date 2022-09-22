@@ -4,7 +4,10 @@
   "description": "A basic sample channel application for Roku",
   "main": "index.js",
   "scripts": {
-    "build": "bsc"
+    "_phase:build": "bsc",
+    "_phase:test": "echo rooibos?",
+    "build": "bsc",
+    "test": "echo rooibos?"
   },
   "keywords": ["ropm"],
   "author": "",

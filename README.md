@@ -10,6 +10,7 @@ This project is a testbed that aims to prove out the concept of a Rush monorepo 
    - https://github.com/georgejecook/rooibos-roku-sample
    - https://github.com/rokucommunity/brighterscript-template
  - build a "roku-rig" containing bsconfig-base.json
+ - enable phased builds
 
 ## Challengelog
 
@@ -17,3 +18,6 @@ This project is a testbed that aims to prove out the concept of a Rush monorepo 
    - fix: patched in pnpmfile for now
  - `bsconfig.json` extending base file seems to bake real path of `rootDir` at read time
    - fix: override `rootDir` in each app's bsconfig for now
+ - I don't think there is a way to limit parallelism on only the "test" phase
+   - Since each unit test pass requires a device, some limit/gate would be necessary
+   - For now, disable parallelism at command level for bulk commands (command-line.json)
