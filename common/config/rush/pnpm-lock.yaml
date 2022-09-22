@@ -10,6 +10,7 @@ importers:
       '@acme/roku-rig': workspace:*
       '@rokucommunity/bslint': ~0.7.5
       brighterscript: ~0.57.2
+      dotenv: ~16.0.2
       roku-deploy: ~3.9.1
       rooibos-roku: ~5.2.2
     dependencies:
@@ -17,6 +18,7 @@ importers:
     devDependencies:
       '@rokucommunity/bslint': 0.7.5_brighterscript@0.57.2
       brighterscript: 0.57.2
+      dotenv: 16.0.2
       roku-deploy: 3.9.1
       rooibos-roku: 5.2.2
 
@@ -334,6 +336,11 @@ packages:
   /delayed-stream/1.0.0:
     resolution: {integrity: sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==}
     engines: {node: '>=0.4.0'}
+    dev: true
+
+  /dotenv/16.0.2:
+    resolution: {integrity: sha512-JvpYKUmzQhYoIFgK2MOnF3bciIZoItIIoryihy0rIA+H4Jy0FmgyKYAHCTN98P5ybGSJcIFbh6QKeJdtZd1qhA==}
+    engines: {node: '>=12'}
     dev: true
 
   /ecc-jsbn/0.1.2:

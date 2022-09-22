@@ -67,7 +67,8 @@ common/autoinstallers/*/.npmrc
 # Heft
 .heft
 
-# Roku projects: build output
+# Roku: build output
 build
 dist
+out
 

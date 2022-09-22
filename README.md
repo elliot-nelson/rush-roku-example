@@ -2,6 +2,8 @@
 
 This project is a testbed that aims to prove out the concept of a Rush monorepo designed around Roku development and the BrighterScript toolchain.
 
+In order to run unit tests you will need a Roku device in developer mode, see https://developer.roku.com/docs/developer-program/getting-started/developer-setup.md for more information.
+
 ## Changelog
 
  - rush init
