@@ -9,9 +9,10 @@
   "keywords": ["ropm"],
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "brighterscript": "~0.57.2",
     "@rokucommunity/bslint": "~0.7.5",
-    "roku-deploy": "~3.9.1"
+    "roku-deploy": "~3.9.1",
+    "rooibos-roku": "~5.2.2"
   }
 }

@@ -28,6 +28,14 @@ module.exports = {
  */
 function readPackage(packageJson, context) {
 
+  // Fix undent dependency
+  console.log(packageJson);
+  console.log(packageJson.name);
+  console.log(packageJson.devDependencies);
+  if (packageJson.name === 'rooibos-roku') {
+    packageJson.dependencies.undent = '0.1.0';
+  }
+
   // // The karma types have a missing dependency on typings from the log4js package.
   // if (packageJson.name === '@types/karma') {
   //  context.log('Fixed up dependencies for @types/karma');
