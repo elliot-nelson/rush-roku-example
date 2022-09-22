@@ -23,3 +23,28 @@ In order to run unit tests you will need a Roku device in developer mode, see ht
  - I don't think there is a way to limit parallelism on only the "test" phase
    - Since each unit test pass requires a device, some limit/gate would be necessary
    - For now, disable parallelism at command level for bulk commands (command-line.json)
+
+## Next steps
+
+ - Move "dev script" into tools/ folder
+   - It could be written in typescript and added as dependency of hello-world
+   - Move dotenv requirement out of app and into the tool
+ - Try out vscode extension
+   - Setup a bsfmt.json
+   - Do we need to add bsfmt itself to package.json of every project, or does extension handle it?
+ - bslint
+   - Make lint run as part of build?
+   - Make lint run on pre-commit?
+ - rooibos
+   - add a unit test for hello-world app
+   - ensure it runs
+ - libraries
+   - create a library
+   - have hello-world app use the library using bsconfig file mapping
+   - can we run a "library's" unit tests independent of an app with a manifest file?
+ - ropm
+   - convert library to use ropm
+   - test when ropm happens (at build time?)
+   - experiment with turning ropm directory copies into symlinks into node_modules
+   - can ropm "install" from node_modules instead of searching itself? (rely on pnpm cache)
+
