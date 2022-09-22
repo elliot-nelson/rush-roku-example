@@ -473,5 +473,12 @@
     //   "reviewCategory": "tools",
     //   "tags": ["tools"]
     // }
+
+    // apps
+    {
+      "packageName": "@acme/hello-world",
+      "projectFolder": "apps/hello-world",
+      "tags": ["apps"]
+    }
   ]
 }
