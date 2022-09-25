@@ -1,30 +1,34 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<component name="HelloWorld" extends="Scene"> 
+<component name="HelloWorld" extends="Scene">
 	<children>
-      <Label id="myLabel" 
-      	text="Hello World!"
-      	width="1280" 
-      	height="720" 
+      <Label id="myLabel"
+      	text=""
+      	width="1280"
+      	height="720"
       	horizAlign="center"
       	vertAlign="center"
       	/>
     </children>
 <!-- BrightScript Portion -->
+<script type="text/brightscript" uri="pkg:/source/Constants.brs"></script>
 <script type="text/brightscript" >
 <![CDATA[
-  '** 
+  '**
   '** Example: Edit a Label size and color with BrightScript
   '**
 
   function init()
     m.top.setFocus(true)
     m.myLabel = m.top.findNode("myLabel")
-    
+
+    'Set header text
+    m.myLabel.text = headerText()
+
     'Set the font size
-    m.myLabel.font.size=92
+    m.myLabel.font.size=headerSize()
 
     'Set the color to light blue
-    m.myLabel.color="0x72D7EEFF"
+    m.myLabel.color=headerColor()
 
     '**
     '** The full list of editable attributes can be located at:
