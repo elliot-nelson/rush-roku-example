@@ -13,6 +13,9 @@ In order to run unit tests you will need a Roku device in developer mode, see ht
    - https://github.com/rokucommunity/brighterscript-template
  - build a "roku-rig" containing bsconfig-base.json
  - enable phased builds
+ - created a simple "library" that just exports a file with some functions
+   - this shows off consuming library functions from an app component (not possible normally)
+   - first iteration uses bsconfig file mapping for imports
 
 ## Challengelog
 
@@ -43,8 +46,6 @@ In order to run unit tests you will need a Roku device in developer mode, see ht
    - add a unit test for hello-world app
    - ensure it runs
  - libraries
-   - create a library
-   - have hello-world app use the library using bsconfig file mapping
    - can we run a "library's" unit tests independent of an app with a manifest file?
  - ropm
    - convert library to use ropm
