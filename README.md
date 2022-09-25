@@ -23,6 +23,10 @@ In order to run unit tests you will need a Roku device in developer mode, see ht
  - I don't think there is a way to limit parallelism on only the "test" phase
    - Since each unit test pass requires a device, some limit/gate would be necessary
    - For now, disable parallelism at command level for bulk commands (command-line.json)
+ - Both "rushx build" and "rushx dev" (bsc and roku-deploy) read the bs-config file, but roku-deploy is stricter
+   - For example, comments are NOT ALLOWED by roku-deploy, but they ARE by bsc
+   - This is very restrictive, comments are crucial for config json files
+   - fix: delete comments (but hopefully we can fix upstream)
 
 ## Next steps
 

@@ -1,12 +1,12 @@
 
 Function headerText()
-    Return "Hello World"
+    Return "A library text"
 End Function
 
 Function headerSize()
-    Return 92
+    Return 91
 End Function
 
 Function headerColor()
-    Return "0x72D7EEFF"
+    Return "0x72E7AEFF"
 End Function

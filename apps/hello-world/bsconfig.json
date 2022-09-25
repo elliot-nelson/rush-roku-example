@@ -2,13 +2,11 @@
   "extends": "./node_modules/@acme/roku-rig/profiles/app/bsconfig-base.json",
   "rootDir": "src",
   "files": [
-    // app
     "manifest",
     "source/**/*.*",
     "components/**/*.*",
     "images/**/*.*",
 
-    // hello-world-constants
     {
       "src": "../../../libraries/hello-world-constants/src/source/**/*.*",
       "dest": "source/hello-world-constants"
