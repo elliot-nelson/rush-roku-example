@@ -1,6 +1,11 @@
 {
   "rootDir": "src",
-  "files": ["manifest", "source/*.*", "source/**/*.*", "components/**/*.*"],
+  "files": [
+    "manifest",
+    "source/**/*.*",
+    "components/**/*.*",
+    "images/**/*.*"
+  ],
   "autoImportComponentScript": true,
   "createPackage": false,
   "stagingFolderPath": "build",
