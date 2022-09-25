@@ -10,7 +10,7 @@
       	/>
     </children>
 <!-- BrightScript Portion -->
-<script type="text/brightscript" uri="pkg:/source/Constants.brs"></script>
+<script type="text/brightscript" uri="pkg:/source/hello-world-constants/Constants.brs"></script>
 <script type="text/brightscript" >
 <![CDATA[
   '**
