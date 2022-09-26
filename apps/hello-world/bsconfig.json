@@ -8,7 +8,7 @@
     "images/**/*.*",
 
     {
-      "src": "../../../libraries/hello-world-constants/src/source/**/*.*",
+      "src": "../node_modules/@acme/hello-world-constants/src/source/**/*.*",
       "dest": "source/hello-world-constants"
     }
   ]

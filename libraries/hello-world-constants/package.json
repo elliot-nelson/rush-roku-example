@@ -1,7 +1,7 @@
 {
-  "name": "@acme/hello-world",
+  "name": "@acme/hello-world-constants",
   "version": "1.0.0",
-  "description": "A basic sample channel application for Roku",
+  "description": "A small utility library",
   "main": "index.js",
   "scripts": {
     "_phase:build": "bsc",
@@ -18,10 +18,9 @@
     "@rokucommunity/bslint": "~0.7.5",
     "roku-deploy": "~3.9.1",
     "rooibos-roku": "~5.2.2",
-    "dotenv": "~16.0.2",
-    "@acme/roku-rig": "workspace:*"
+    "dotenv": "~16.0.2"
   },
   "dependencies": {
-    "@acme/hello-world-constants": "workspace:*"
+    "@acme/roku-rig": "workspace:*"
   }
 }

@@ -7,6 +7,25 @@ importers:
 
   ../../apps/hello-world:
     specifiers:
+      '@acme/hello-world-constants': workspace:*
+      '@acme/roku-rig': workspace:*
+      '@rokucommunity/bslint': ~0.7.5
+      brighterscript: ~0.57.2
+      dotenv: ~16.0.2
+      roku-deploy: ~3.9.1
+      rooibos-roku: ~5.2.2
+    dependencies:
+      '@acme/hello-world-constants': link:../../libraries/hello-world-constants
+    devDependencies:
+      '@acme/roku-rig': link:../../rigs/roku-rig
+      '@rokucommunity/bslint': 0.7.5_brighterscript@0.57.2
+      brighterscript: 0.57.2
+      dotenv: 16.0.2
+      roku-deploy: 3.9.1
+      rooibos-roku: 5.2.2
+
+  ../../libraries/hello-world-constants:
+    specifiers:
       '@acme/roku-rig': workspace:*
       '@rokucommunity/bslint': ~0.7.5
       brighterscript: ~0.57.2

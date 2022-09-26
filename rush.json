@@ -481,6 +481,13 @@
       "tags": ["apps"]
     },
 
+    // libraries
+    {
+      "packageName": "@acme/hello-world-constants",
+      "projectFolder": "libraries/hello-world-constants",
+      "tags": ["libraries"]
+    },
+
     // rigs
     {
       "packageName": "@acme/roku-rig",
