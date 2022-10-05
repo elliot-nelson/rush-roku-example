@@ -21,6 +21,7 @@ In order to run unit tests you will need a Roku device in developer mode, see ht
 
  - `rooibos-roku` seems to have an unmet dependency on `undent`
    - fix: patched in pnpmfile for now
+   - FIXED! Undent is now a dependency
  - `bsconfig.json` extending base file seems to bake real path of `rootDir` at read time
    - fix: override `rootDir` in each app's bsconfig for now
  - I don't think there is a way to limit parallelism on only the "test" phase
@@ -30,6 +31,8 @@ In order to run unit tests you will need a Roku device in developer mode, see ht
    - For example, comments are NOT ALLOWED by roku-deploy, but they ARE by bsc
    - This is very restrictive, comments are crucial for config json files
    - fix: delete comments (but hopefully we can fix upstream)
+   - FIXED: This was actually a JSON.parse in the build script!
+ - Make SURE that you make a Main.bs, not a Main.brs, otherwise Rooibos can't patch your main()
 
 ## Next steps
 

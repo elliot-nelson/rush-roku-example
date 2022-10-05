@@ -1,0 +1,22 @@
+namespace tests
+
+    @suite("basic tests")
+    class BasicTests extends Rooibos.BaseTestSuite
+
+        '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        @describe("tests the node context is available for a Node scope function")
+        '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        @it("does something in node scope")
+        function _()
+            print "I am Here"
+            m.assertEqual(3, 4)
+            'm.assertNotInvalid(m.node)
+            'Tests.doSomethingInNodeScope(true)
+            'm.assertInvalid(m._isNodeScopeVarSet)
+            'm.assertTrue(m.node._isNodeScopeVarSet)
+        end function
+
+    end class
+
+end namespace

@@ -14,11 +14,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "brighterscript": "~0.57.2",
+    "brighterscript": "~0.52.3",
     "@rokucommunity/bslint": "~0.7.5",
     "roku-deploy": "~3.9.1",
-    "rooibos-roku": "~5.2.2",
+    "rooibos-roku": "~5.2.3",
     "dotenv": "~16.0.2",
+    "ropm": "~0.10.10",
     "@acme/roku-rig": "workspace:*"
   },
   "dependencies": {

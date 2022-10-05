@@ -1,0 +1,8 @@
+
+function main()
+  print "Main"
+  ' hello world
+
+  print "Hello World"
+  print " I am In Main"
+end function
