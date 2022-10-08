@@ -1,0 +1,5 @@
+import "pkg:/source/utils.bs"
+
+function hello()
+end function
+

@@ -1,0 +1,40 @@
+'This import line is totally optional, the test works without it.
+'It's a nice convention to follow because it tells the reader
+'exactly what source file this spec file is testing.
+import "./Math.bs"
+
+namespace tests
+    @suite("Math")
+    class MathSpec extends Rooibos.BaseTestSuite
+
+        '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        @describe("add")
+        '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        @it("adds two numbers together")
+        function _()
+            m.assertEqual(Math.add(3, 4), 7)
+        end function
+
+        @it("adds negative numbers together")
+        function _()
+            m.assertEqual(Math.add(-3, -4), -7)
+        end function
+
+        '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        @describe("subtract")
+        '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        @it("subtracts one number from another")
+        function _()
+            m.assertEqual(Math.subtract(4, 3), 1)
+        end function
+
+        @it("subtracts with negative numbers")
+        function _()
+            m.assertEqual(Math.subtract(-3, -7), 4)
+        end function
+
+        'Additional tests could go here! Follow the template above for each
+        'individual test ("@it" annotation). Group them by function or other logical
+        'grouping using "@describe" annotation.
+    end class
+end namespace

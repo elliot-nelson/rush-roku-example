@@ -10,12 +10,15 @@
       	/>
     </children>
 <!-- BrightScript Portion -->
+<script type="text/brightscript" uri="pkg:/source/helloworld.bs"></script>
 <script type="text/brightscript" uri="pkg:/source/hello-world-constants/Constants.brs"></script>
 <script type="text/brightscript" >
 <![CDATA[
   '**
   '** Example: Edit a Label size and color with BrightScript
   '**
+
+  this()
 
   function init()
     m.top.setFocus(true)

@@ -1,0 +1,28 @@
+{
+  "name": "@acme/simple-math",
+  "version": "0.0.1",
+  "description": "A simple library containing math functions",
+  "scripts": {
+    "_phase:build": "rushx build:test",
+    "_phase:test": "echo rooibos?",
+    "build": "rushx build:test",
+    "build:test": "node scripts/build.js --env test",
+    "test": "echo rooibos?",
+    "dev": "node scripts/dev.js"
+  },
+  "keywords": ["ropm"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "brighterscript": "~0.57.2",
+    "@rokucommunity/bslint": "~0.7.5",
+    "roku-deploy": "~3.9.1",
+    "rooibos-roku": "~5.2.2",
+    "dotenv": "~16.0.2"
+  },
+  "dependencies": {
+    "@acme/roku-rig": "workspace:*",
+    "yargs": "~17.6.0",
+    "jju": "~1.4.0"
+  }
+}

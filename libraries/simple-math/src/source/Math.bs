@@ -1,0 +1,11 @@
+' Math
+
+namespace Math
+    function add(x, y)
+        return x + y
+    end function
+
+    function subtract(x, y)
+        return x - y
+    end function
+end namespace

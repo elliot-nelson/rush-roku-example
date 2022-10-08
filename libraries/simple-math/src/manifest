@@ -1,0 +1,10 @@
+# This file is checked in currently because bsc can't create a zip file
+# without it.
+#
+# In the future, I'd like to remove it, and have it generated automatically
+# by the bsc plugin if one doesn't exist (a "test manifest").
+
+title=Library
+major_version=1
+minor_version=0
+build_version=00001

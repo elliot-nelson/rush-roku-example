@@ -1,0 +1,14 @@
+{
+  "extends": "./node_modules/@acme/roku-rig/profiles/app/bsconfig-base.json",
+  "rootDir": "src",
+  "plugins": [
+    "rooibos-roku"
+  ],
+  "files": [
+    // src
+    "manifest",
+    "source/**/*.*",
+    "components/**/*.*",
+    "images/**/*.*"
+  ]
+}

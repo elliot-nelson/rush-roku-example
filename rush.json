@@ -487,6 +487,11 @@
       "projectFolder": "libraries/hello-world-constants",
       "tags": ["libraries"]
     },
+    {
+      "packageName": "@acme/simple-math",
+      "projectFolder": "libraries/simple-math",
+      "tags": ["libraries"]
+    },
 
     // rigs
     {
