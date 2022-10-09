@@ -46,6 +46,7 @@ importers:
   ../../libraries/simple-math:
     specifiers:
       '@acme/bsc-plugin-ropm2': workspace:*
+      '@acme/hello-world-constants': workspace:*
       '@acme/roku-rig': workspace:*
       '@rokucommunity/bslint': ~0.7.5
       brighterscript: ~0.57.2
@@ -56,6 +57,7 @@ importers:
       yargs: ~17.6.0
     dependencies:
       '@acme/bsc-plugin-ropm2': link:../../tools/bsc-plugin-ropm2
+      '@acme/hello-world-constants': link:../hello-world-constants
       '@acme/roku-rig': link:../../rigs/roku-rig
       jju: 1.4.0
       yargs: 17.6.0

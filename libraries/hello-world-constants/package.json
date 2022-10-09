@@ -2,7 +2,6 @@
   "name": "@acme/hello-world-constants",
   "version": "1.0.0",
   "description": "A small utility library",
-  "main": "index.js",
   "scripts": {
     "_phase:build": "bsc",
     "_phase:test": "echo rooibos?",

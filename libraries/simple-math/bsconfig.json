@@ -11,5 +11,8 @@
     "source/**/*.*",
     "components/**/*.*",
     "images/**/*.*"
-  ]
+  ],
+  "packages": {
+    "@acme/hello-world-constants": "Constants"
+  }
 }
