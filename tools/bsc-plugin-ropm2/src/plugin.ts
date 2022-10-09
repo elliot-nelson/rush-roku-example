@@ -6,12 +6,19 @@ import type {
     TranspileObj,
     AstEditor,
     BeforeFileTranspileEvent,
-    PluginHandler
+    PluginHandler,
 } from 'brighterscript';
 import {
-    isBrsFile
+    BsConfig,
+    isBrsFile,
+    util
 } from 'brighterscript';
 import * as minimatch from 'minimatch';
+
+
+export interface IRokuModuleConfig {
+    packages: Record<string, string>;
+}
 
 export class ExamplePlugin implements CompilerPlugin {
     public name = 'examplePlugin';
@@ -21,10 +28,63 @@ export class ExamplePlugin implements CompilerPlugin {
     public _builder: ProgramBuilder;
     //public config: RooibosConfig;
 
+    public config: IRokuModuleConfig;
+
     beforeProgramCreate(builder: ProgramBuilder): void {
         this._builder = builder;
+        this.config = this.getConfig(builder.options);
 
-        console.log('beforeProgramCreate', builder);
+        console.log(this.config);
+        console.log(builder.options);
+
+        console.log(builder.options.files);
+        for (let key of Object.keys(this.config.packages)) {
+            console.log(key);
+            console.log(require.resolve(`${key}/bsconfig.json`));
+
+            const resolved = require.resolve(`${key}/bsconfig.json`);
+
+            const config = util.normalizeAndResolveConfig({ project: resolved });
+
+            if (config.files) {
+                for (const entry of config.files) {
+                    if (typeof entry === 'string') {
+                    } else {
+                        console.log(entry.src);
+                    }
+                }
+            }
+
+            console.log('loaded config for ' + key);
+            console.log(config);
+
+            // From here, we would want to reuse https://github.com/rokucommunity/ropm/blob/master/src/prefixer/RopmModule.ts
+            // as much as possible.
+        }
+    }
+
+    /*
+        [
+          Dirent { name: '.rush', [Symbol(type)]: 2 },
+          Dirent { name: 'README.md', [Symbol(type)]: 1 },
+          Dirent { name: 'bsconfig.json', [Symbol(type)]: 1 },
+          Dirent { name: 'build', [Symbol(type)]: 2 },
+          Dirent { name: 'node_modules', [Symbol(type)]: 2 },
+          Dirent { name: 'out', [Symbol(type)]: 2 },
+          Dirent { name: 'package.json', [Symbol(type)]: 1 },
+          Dirent { name: 'scripts', [Symbol(type)]: 2 },
+          Dirent { name: 'src', [Symbol(type)]: 2 },
+          Dirent { name: 'test.js', [Symbol(type)]: 1 }
+        ]
+        > _[0].isDirectory()
+        true
+        >
+        */
+
+
+
+
+        //console.log('beforeProgramCreate', builder);
 
         //this.config = this.getConfig((builder.options as any).rooibos || {});
 
@@ -35,6 +95,13 @@ export class ExamplePlugin implements CompilerPlugin {
             this.codeCoverageProcessor = new CodeCoverageProcessor(builder);
         }
         */
+
+    private getConfig(options: BsConfig): IRokuModuleConfig {
+        const packages = (options as any).packages as Record<string, string> || {};
+
+        return {
+            packages
+        };
     }
 
     /*
@@ -68,12 +135,12 @@ export class ExamplePlugin implements CompilerPlugin {
     */
 
     afterProgramCreate(program: Program) {
-        console.log('afterProgramCreate', program);
+        //console.log('afterProgramCreate', program);
         //this.fileFactory.addFrameworkFiles(program);
     }
 
     afterFileParse(file: BscFile): void {
-        console.log('afp', file.pkgPath);
+        //console.log('afp', file.pkgPath);
 
         return;
 
@@ -101,13 +168,13 @@ export class ExamplePlugin implements CompilerPlugin {
     beforePublish() { }
 
     beforeProgramTranspile(program: Program, entries: TranspileObj[], editor: AstEditor) {
-        console.log('bpt', program);
+        //console.log('bpt', program);
         //this.session.addTestRunnerMetadata(editor);
         //this.session.addLaunchHook(editor);
     }
 
     beforeFileTranspile(event: BeforeFileTranspileEvent) {
-        console.log('bft', event);
+        //console.log('bft', event);
         /*
         let testSuite = this.session.sessionInfo.testSuitesToRun.find((ts) => ts.file.pkgPath === event.file.pkgPath);
         if (testSuite) {
