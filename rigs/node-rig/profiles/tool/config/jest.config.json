@@ -1,0 +1,5 @@
+{
+  "extends": "@rushstack/heft-jest-plugin/includes/jest-shared.config.json",
+  "reporters": ["default", ["jest-junit", { "outputDirectory": "temp/jest-reports" }]],
+  "collectCoverage": true
+}

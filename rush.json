@@ -493,10 +493,22 @@
       "tags": ["libraries"]
     },
 
+    // tools
+    {
+      "packageName": "@acme/bsc-plugin-ropm2",
+      "projectFolder": "tools/bsc-plugin-ropm2",
+      "tags": ["tools"]
+    },
+
     // rigs
     {
       "packageName": "@acme/roku-rig",
       "projectFolder": "rigs/roku-rig",
+      "tags": ["rigs"]
+    },
+    {
+      "packageName": "@acme/node-rig",
+      "projectFolder": "rigs/node-rig",
       "tags": ["rigs"]
     }
   ]

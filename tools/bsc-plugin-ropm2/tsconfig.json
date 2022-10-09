@@ -1,0 +1,7 @@
+{
+  "extends": "./node_modules/@acme/node-rig/profiles/tool/tsconfig-base.json",
+
+  "compilerOptions": {
+    "types": ["node", "heft-jest"]
+  }
+}

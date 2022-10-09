@@ -23,6 +23,7 @@
   "dependencies": {
     "@acme/roku-rig": "workspace:*",
     "yargs": "~17.6.0",
-    "jju": "~1.4.0"
+    "jju": "~1.4.0",
+    "@acme/bsc-plugin-ropm2": "workspace:*"
   }
 }

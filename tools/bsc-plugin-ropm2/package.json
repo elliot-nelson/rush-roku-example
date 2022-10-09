@@ -1,0 +1,33 @@
+{
+  "name": "@acme/bsc-plugin-ropm2",
+  "version": "1.0.0",
+  "description": "Test plugin",
+  "main": "lib/plugin.js",
+  "scripts": {
+    "_phase:build": "heft build --clean",
+    "_phase:test": "echo noop",
+    "build": "heft build --clean",
+    "test": "heft build --clean"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "brighterscript": "~0.52.3",
+    "@rokucommunity/bslint": "~0.7.5",
+    "roku-deploy": "~3.9.1",
+    "rooibos-roku": "~5.2.3",
+    "dotenv": "~16.0.2",
+    "ropm": "~0.10.10",
+    "@acme/roku-rig": "workspace:*"
+  },
+  "dependencies": {
+    "@rushstack/heft": "~0.48.0",
+    "typescript": "~4.8.4",
+    "@acme/node-rig": "workspace:*",
+    "minimatch": "~5.1.0",
+    "@types/heft-jest": "~1.0.3",
+    "@types/node": "16",
+    "@types/minimatch": "~5.1.2",
+    "@types/fs-extra": "~9.0.13"
+  }
+}
